@@ -6,7 +6,7 @@ import Test from "./components/Test";
 export default function App() {
   return (
     <div className="App">
-      <h1>Rogue Talent Tree</h1>
+      <h1>Rogue Talent Tree Test</h1>
       <TalentTree />
     </div>
   );

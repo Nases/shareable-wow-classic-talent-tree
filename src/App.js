@@ -1,7 +1,6 @@
 import React from "react";
-import "./styles.css";
 import TalentTree from "./components/TalentTree";
-import Test from "./components/Test";
+import { makeStyles } from "@material-ui/styles";
 
 var WebFont = require("webfontloader");
 
@@ -11,10 +10,18 @@ WebFont.load({
   }
 });
 
+const useStyles = makeStyles({
+  title: {
+    textAlign: "center",
+    fontFamily: "Alegreye Sans, sans-serif"
+  }
+});
+
 export default function App() {
+  const classes = useStyles();
   return (
-    <div className="App">
-      <h1>Rogue Talent Tree</h1>
+    <div>
+      <h1 className={classes.title}>Rogue Talent Tree</h1>
       <TalentTree />
     </div>
   );

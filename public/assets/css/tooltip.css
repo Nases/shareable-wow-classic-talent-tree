@@ -1,0 +1,16 @@
+.tippy-tooltip.bootstrap-theme {
+  background: black;
+}
+
+.tippy-tooltip.bootstrap-theme[data-placement^="top"] .tippy-arrow {
+  border-top-color: black;
+}
+.tippy-tooltip.bootstrap-theme[data-placement^="bottom"] .tippy-arrow {
+  border-bottom-color: black;
+}
+.tippy-tooltip.bootstrap-theme[data-placement^="left"] .tippy-arrow {
+  border-left-color: black;
+}
+.tippy-tooltip.bootstrap-theme[data-placement^="right"] .tippy-arrow {
+  border-right-color: black;
+}

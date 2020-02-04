@@ -44,15 +44,15 @@ export default function TalentTree() {
   const [state, setState] = useState({});
 
   function changeTalentState(updatedState) {
-    setState({
-      ...state,
-      updatedState
-    });
+    setState(prevState => ({
+      ...prevState,
+      ...updatedState
+    }));
   }
 
   useEffect(() => {
     console.log(state);
-  });
+  }, [state]);
 
   return (
     <Grid container className={classes.root} spacing={2}>

@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/styles";
-import { Grid } from "@material-ui/core";
+import { Grid, Tooltip } from "@material-ui/core";
+import Tippy from "@tippy.js/react";
+import { followCursor } from "tippy.js";
+import "tippy.js/dist/tippy.css";
+import "../../public/assets/css/tooltip.css";
 
 export default function TalentIcon(props) {
   var index = props.index;
@@ -17,7 +21,18 @@ export default function TalentIcon(props) {
   var talentInfo = require("../../public/assets/rogue/talentInfo.json");
   var iconBG = require("../../public/assets/rogue/talent-icons/iconBG.png");
   var talentIcon = require(`../../public/assets/rogue/talent-icons/${index}.jpg`);
-  var maxTalentPoints = talentInfo[talentIndex].maxPoints;
+  var talent = talentInfo[talentIndex];
+  var maxTalentPoints = talent.maxPoints;
+
+  var title1 = talent.title1;
+  var title2 = talent.title2;
+
+  const talentTooltip = (
+    <div>
+      <div>{title1}</div>
+      <div>{title2}</div>
+    </div>
+  );
 
   const useStyles = makeStyles({
     iconBG: {
@@ -55,34 +70,45 @@ export default function TalentIcon(props) {
   const [currentPoints, setCurrentPoints] = useState(0);
 
   function talentOnLeftClick() {
-    setCurrentPoints(currentPoints + 1);
+    if (currentPoints < maxTalentPoints) {
+      setCurrentPoints(currentPoints + 1);
+    }
   }
 
   function talentOnRightClick(event) {
     event.preventDefault();
-    setCurrentPoints(currentPoints - 1);
+    if (currentPoints > 0) {
+      setCurrentPoints(currentPoints - 1);
+    }
   }
 
   useEffect(() => {
     var talentStateStructure = {};
     talentStateStructure[talentIndex] = currentPoints;
-    // props.changeTalentState(talentStateStructure);
-    console.log(talentIndex);
-  });
+    props.changeTalentState(talentStateStructure);
+  }, [currentPoints]);
 
   return (
-    <Grid
-      item
-      xs={2.1}
-      className={classes.iconBG}
-      onClick={talentOnLeftClick}
-      onContextMenu={talentOnRightClick}
+    <Tippy
+      content={talentTooltip}
+      theme="bootstrap"
+      hideOnClick={false}
+      followCursor={true}
+      plugins={[followCursor]}
     >
-      <div className={classes._1}>
-        <div className={classes.currentPoints}>
-          {currentPoints}/{maxTalentPoints}
+      <Grid
+        item
+        xs={2.1}
+        className={classes.iconBG}
+        onClick={talentOnLeftClick}
+        onContextMenu={talentOnRightClick}
+      >
+        <div className={classes._1}>
+          <div className={classes.currentPoints}>
+            {currentPoints}/{maxTalentPoints}
+          </div>
         </div>
-      </div>
-    </Grid>
+      </Grid>
+    </Tippy>
   );
 }

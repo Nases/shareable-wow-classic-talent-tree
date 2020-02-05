@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/styles";
-import { Grid, Tooltip } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import Tippy from "@tippy.js/react";
 import { followCursor } from "tippy.js";
-import "tippy.js/dist/tippy.css";
-import "../../public/assets/css/tooltip.css";
+import TalentTooltip from "./TalentTooltip";
 
 export default function TalentIcon(props) {
   var index = props.index;
@@ -23,16 +22,6 @@ export default function TalentIcon(props) {
   var talentIcon = require(`../../public/assets/rogue/talent-icons/${index}.jpg`);
   var talent = talentInfo[talentIndex];
   var maxTalentPoints = talent.maxPoints;
-
-  var title1 = talent.title1;
-  var title2 = talent.title2;
-
-  const talentTooltip = (
-    <div>
-      <div>{title1}</div>
-      <div>{title2}</div>
-    </div>
-  );
 
   const useStyles = makeStyles({
     iconBG: {
@@ -60,8 +49,7 @@ export default function TalentIcon(props) {
       marginTop: "33px",
       marginLeft: "27px",
       fontFamily: "Alegreya Sans",
-      color: "white",
-      userSelect: "none"
+      color: "white"
     }
   });
 
@@ -90,10 +78,11 @@ export default function TalentIcon(props) {
 
   return (
     <Tippy
-      content={talentTooltip}
+      content={<TalentTooltip index={index} currentPoints={currentPoints} />}
       theme="bootstrap"
       hideOnClick={false}
       followCursor={true}
+      duration={[0, 0]}
       plugins={[followCursor]}
     >
       <Grid

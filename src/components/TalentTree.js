@@ -19,7 +19,8 @@ const paperStyle = {
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
+    userSelect: "none"
   },
   assasination: {
     ...paperStyle,

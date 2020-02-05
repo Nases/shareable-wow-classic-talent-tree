@@ -1,5 +1,3 @@
-Parent to children callback function
-in order to get current state to parent.
-
-Need to develop that structure in order to
-progress with max/min talent points reached.
+TOOLTIPS, remember to move unused things inside
+TalentIcon.js!
+Also populate the TalentTooltip.js

@@ -34,7 +34,7 @@ export default function TalentTooltip(props) {
   var renderRank;
   var renderNextRank;
 
-  if (currentPoints == 0) {
+  if (currentPoints === 0) {
     renderRank = nextRank;
     renderNextRank = "";
   } else {

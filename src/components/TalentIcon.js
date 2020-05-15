@@ -9,17 +9,18 @@ export default function TalentIcon(props) {
   var index = props.index;
 
   if (index == "blank") {
-    return (
-      <Grid item xs={3} style={{ visibility: "hidden" }}>
-        .
-      </Grid>
-    );
+    index = 1
+    // return (
+    //   <Grid item xs={3} style={{ visibility: "hidden" }}>
+    //     .
+    //   </Grid>
+    // );
   }
 
   var talentIndex = "_" + index;
-  var talentInfo = require("../../public/assets/rogue/talentInfo.json");
-  var iconBG = require("../../public/assets/rogue/talent-icons/iconBG.png");
-  var talentIcon = require(`../../public/assets/rogue/talent-icons/${index}.jpg`);
+  var talentInfo = require("../assets/rogue/talentInfo.json");
+  var iconBG = require("../assets/rogue/talent-icons/iconBG.png");
+  var talentIcon = require(`../assets/rogue/talent-icons/${index}.jpg`);
   var talent = talentInfo[talentIndex];
   var maxTalentPoints = talent.maxPoints;
 
@@ -57,6 +58,13 @@ export default function TalentIcon(props) {
 
   const [currentPoints, setCurrentPoints] = useState(0);
 
+  useEffect(() => {
+    var talentStateStructure = {};
+    talentStateStructure[talentIndex] = currentPoints;
+    props.changeTalentState(talentStateStructure);
+  }, [currentPoints]);
+
+
   function talentOnLeftClick() {
     if (currentPoints < maxTalentPoints) {
       setCurrentPoints(currentPoints + 1);
@@ -74,11 +82,6 @@ export default function TalentIcon(props) {
     }
   }
 
-  useEffect(() => {
-    var talentStateStructure = {};
-    talentStateStructure[talentIndex] = currentPoints;
-    props.changeTalentState(talentStateStructure);
-  }, [currentPoints]);
 
   return (
     <Tippy

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/styles";
-const talentInfo = require("../../public/assets/rogue/talentInfo.json");
+const talentInfo = require("../assets/rogue/talentInfo.json");
 
 const useStyles = makeStyles({
   root: {

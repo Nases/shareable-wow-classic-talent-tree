@@ -4,9 +4,9 @@ import { Grid, Paper } from "@material-ui/core";
 
 import TalentIcon from "./TalentIcon";
 
-const assasinationBG = require("../../public/assets/rogue/background/assasination.jpg");
-const combatBG = require("../../public/assets/rogue/background/combat.jpg");
-const subtletyBG = require("../../public/assets/rogue/background/subtlety.jpg");
+const assasinationBG = require("../assets/rogue/background/assasination.jpg");
+const combatBG = require("../assets/rogue/background/combat.jpg");
+const subtletyBG = require("../assets/rogue/background/subtlety.jpg");
 
 const paperStyle = {
   height: 420,
@@ -82,7 +82,8 @@ export default function TalentTree() {
                   changeTalentState={changeTalentState}
                   state={state}
                 />
-                <TalentIcon index="blank" />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
               </Grid>
               <Grid container>
                 <TalentIcon
@@ -95,7 +96,8 @@ export default function TalentTree() {
                   changeTalentState={changeTalentState}
                   state={state}
                 />
-                <TalentIcon index="blank" />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
                 <TalentIcon
                   index="6"
                   changeTalentState={changeTalentState}
@@ -118,10 +120,12 @@ export default function TalentTree() {
                   changeTalentState={changeTalentState}
                   state={state}
                 />
-                <TalentIcon index="blank" />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
               </Grid>
               <Grid container>
-                <TalentIcon index="blank" />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
                 <TalentIcon
                   index="10"
                   changeTalentState={changeTalentState}
@@ -132,10 +136,12 @@ export default function TalentTree() {
                   changeTalentState={changeTalentState}
                   state={state}
                 />
-                <TalentIcon index="blank" />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
               </Grid>
               <Grid container>
-                <TalentIcon index="blank" />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
                 <TalentIcon
                   index="12"
                   changeTalentState={changeTalentState}
@@ -146,27 +152,34 @@ export default function TalentTree() {
                   changeTalentState={changeTalentState}
                   state={state}
                 />
-                <TalentIcon index="blank" />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
               </Grid>
               <Grid container>
-                <TalentIcon index="blank" />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
                 <TalentIcon
                   index="14"
                   changeTalentState={changeTalentState}
                   state={state}
                 />
-                <TalentIcon index="blank" />
-                <TalentIcon index="blank" />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
               </Grid>
               <Grid container>
-                <TalentIcon index="blank" />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
                 <TalentIcon
                   index="15"
                   changeTalentState={changeTalentState}
                   state={state}
                 />
-                <TalentIcon index="blank" />
-                <TalentIcon index="blank" />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
               </Grid>
             </Paper>
           </Grid>
@@ -189,7 +202,8 @@ export default function TalentTree() {
                   changeTalentState={changeTalentState}
                   state={state}
                 />
-                <TalentIcon index="blank" />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
               </Grid>
               <Grid container>
                 <TalentIcon
@@ -207,7 +221,8 @@ export default function TalentTree() {
                   changeTalentState={changeTalentState}
                   state={state}
                 />
-                <TalentIcon index="blank" />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
               </Grid>
               <Grid container>
                 <TalentIcon
@@ -220,7 +235,8 @@ export default function TalentTree() {
                   changeTalentState={changeTalentState}
                   state={state}
                 />
-                <TalentIcon index="blank" />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
                 <TalentIcon
                   index="24"
                   changeTalentState={changeTalentState}
@@ -243,7 +259,8 @@ export default function TalentTree() {
                   changeTalentState={changeTalentState}
                   state={state}
                 />
-                <TalentIcon index="blank" />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
               </Grid>
               <Grid container>
                 <TalentIcon
@@ -268,7 +285,8 @@ export default function TalentTree() {
                 />
               </Grid>
               <Grid container>
-                <TalentIcon index="blank" />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
                 <TalentIcon
                   index="32"
                   changeTalentState={changeTalentState}
@@ -279,17 +297,21 @@ export default function TalentTree() {
                   changeTalentState={changeTalentState}
                   state={state}
                 />
-                <TalentIcon index="blank" />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
               </Grid>
               <Grid container>
-                <TalentIcon index="blank" />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
                 <TalentIcon
                   index="34"
                   changeTalentState={changeTalentState}
                   state={state}
                 />
-                <TalentIcon index="blank" />
-                <TalentIcon index="blank" />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
               </Grid>
             </Paper>
           </Grid>
@@ -297,28 +319,33 @@ export default function TalentTree() {
             <div>Subtlety</div>
             <Paper className={classes.subtlety}>
               <Grid container>
-                <TalentIcon index="blank" />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
                 <TalentIcon index="35" changeTalentState={changeTalentState} />
                 <TalentIcon index="36" changeTalentState={changeTalentState} />
-                <TalentIcon index="blank" />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
               </Grid>
               <Grid container>
                 <TalentIcon index="37" changeTalentState={changeTalentState} />
                 <TalentIcon index="38" changeTalentState={changeTalentState} />
                 <TalentIcon index="39" changeTalentState={changeTalentState} />
-                <TalentIcon index="blank" />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
               </Grid>
               <Grid container>
                 <TalentIcon index="40" changeTalentState={changeTalentState} />
                 <TalentIcon index="41" changeTalentState={changeTalentState} />
                 <TalentIcon index="42" changeTalentState={changeTalentState} />
-                <TalentIcon index="blank" />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
               </Grid>
               <Grid container>
                 <TalentIcon index="43" changeTalentState={changeTalentState} />
                 <TalentIcon index="44" changeTalentState={changeTalentState} />
                 <TalentIcon index="45" changeTalentState={changeTalentState} />
-                <TalentIcon index="blank" />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
               </Grid>
               <Grid container>
                 <TalentIcon index="46" changeTalentState={changeTalentState} />
@@ -327,16 +354,22 @@ export default function TalentTree() {
                 <TalentIcon index="49" changeTalentState={changeTalentState} />
               </Grid>
               <Grid container>
-                <TalentIcon index="blank" />
-                <TalentIcon index="blank" />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
                 <TalentIcon index="50" changeTalentState={changeTalentState} />
-                <TalentIcon index="blank" />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
               </Grid>
               <Grid container>
-                <TalentIcon index="blank" />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
                 <TalentIcon index="51" changeTalentState={changeTalentState} />
-                <TalentIcon index="blank" />
-                <TalentIcon index="blank" />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
+                <TalentIcon index="blank" changeTalentState={changeTalentState}
+                  state={state} />
               </Grid>
             </Paper>
           </Grid>

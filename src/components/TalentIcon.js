@@ -60,6 +60,10 @@ export default function TalentIcon(props) {
   function talentOnLeftClick() {
     if (currentPoints < maxTalentPoints) {
       setCurrentPoints(currentPoints + 1);
+
+      var talentStateStructure = {};
+      talentStateStructure["talentPointsLeft"] = props.talentPointsLeft - 1;
+      props.changeTalentState(talentStateStructure);
     }
   }
 

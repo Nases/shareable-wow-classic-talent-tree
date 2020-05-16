@@ -4,6 +4,7 @@ const talentInfo = require("../assets/rogue/talentInfo.json")
 
 const useStyles = makeStyles({
   root: {
+    marginLeft: '42px',
     color: "white",
     width: "auto",
     border: "2px solid gray",
@@ -55,7 +56,6 @@ export default function TalentTooltip(props) {
       <div>{title2}</div>
       <div className={classes.rank}>{renderRank}</div>
       <div className={classes.rank}>{renderNextRank}</div>
-
       <div className={classes.clickToLearn}>
         {talentLearnable ? "Click to learn" : "Right-click to unlearn"}
       </div>

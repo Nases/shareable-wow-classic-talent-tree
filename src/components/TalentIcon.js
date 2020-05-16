@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react"
 import { makeStyles } from "@material-ui/styles"
 import { Grid } from "@material-ui/core"
 import Tippy from "@tippy.js/react"
-import { followCursor } from "tippy.js"
 import TalentTooltip from "./TalentTooltip"
 
 export default function TalentIcon(props) {
@@ -40,7 +39,9 @@ export default function TalentIcon(props) {
       marginTop: "33px",
       marginLeft: "27px",
       fontFamily: "Alegreya Sans",
-      color: "white"
+      color: "white",
+      paddingLeft: '3px',
+      borderRadius: '4px'
     }
   })
 
@@ -75,11 +76,9 @@ export default function TalentIcon(props) {
   return (
     <Tippy
       content={<TalentTooltip index={index} currentPoints={currentPoints} />}
-      theme="bootstrap"
       hideOnClick={false}
-      followCursor={true}
       duration={[0, 0]}
-      plugins={[followCursor]}
+      placement='top-end'
     >
       <Grid
         item

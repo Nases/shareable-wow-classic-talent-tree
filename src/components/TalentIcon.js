@@ -20,7 +20,11 @@ export default function TalentIcon(props) {
       backgroundImage: `url(${iconBG})`,
       backgroundRepeat: "no-repeat",
       margin: "auto",
-      marginBottom: "15px"
+      marginBottom: "15px",
+      // border: '1px solid rgba(64,191,64)',
+      // borderRadius: '5px',
+      // outline: '1px solid rgba(64,191,64)',
+      // outlineOffset: '-4px',
     },
     _1: {
       // filter: "grayscale(95%)",
@@ -28,8 +32,12 @@ export default function TalentIcon(props) {
       backgroundSize: "33px",
       backgroundRepeat: "no-repeat",
       backgroundPosition: "center",
-      width: "100%",
-      height: "100%"
+      width: "36px",
+      height: "36px",
+      border: '1px solid rgba(64,191,64)',
+      borderRadius: '5px',
+      marginTop: '3px',
+      marginLeft: '3px',
     },
     currentPoints: {
       display: "inline-block",
@@ -41,7 +49,8 @@ export default function TalentIcon(props) {
       fontFamily: "Alegreya Sans",
       color: "white",
       paddingLeft: '3px',
-      borderRadius: '4px'
+      borderRadius: '4px',
+      zIndex: '1'
     }
   })
 

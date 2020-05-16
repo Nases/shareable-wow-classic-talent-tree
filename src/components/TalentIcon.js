@@ -3,8 +3,13 @@ import { makeStyles } from "@material-ui/styles"
 import { Grid } from "@material-ui/core"
 import Tippy from "@tippy.js/react"
 import TalentTooltip from "./TalentTooltip"
+import { useTalentPoints, useDispatchTalentPoints } from "../contexts/TalentPointsProvider"
 
 export default function TalentIcon(props) {
+  var talentPoints = useTalentPoints()
+  var dispatchTalentPoints = useDispatchTalentPoints()
+  console.log(talentPoints)
+
   var index = props.index
   var talentIndex = "_" + index
   var talentInfo = require("../assets/rogue/talentInfo.json")
@@ -12,6 +17,7 @@ export default function TalentIcon(props) {
   var talentIcon = require(`../assets/rogue/talent-icons/${index}.jpg`)
   var talent = talentInfo[talentIndex]
   var maxTalentPoints = talent.maxPoints
+  var talentTree = talent.talentTree
 
   const useStyles = makeStyles({
     iconBG: {
@@ -58,18 +64,10 @@ export default function TalentIcon(props) {
 
   const [currentPoints, setCurrentPoints] = useState(0)
 
-  useEffect(() => {
-    var talentStateStructure = {}
-    talentStateStructure[talentIndex] = currentPoints
-  }, [currentPoints])
-
-
   function talentOnLeftClick() {
     if (currentPoints < maxTalentPoints) {
       setCurrentPoints(currentPoints + 1)
-
-      var talentStateStructure = {}
-      talentStateStructure["talentPointsLeft"] = props.talentPointsLeft - 1
+      dispatchTalentPoints({ type: `INCREASE_TALENT_${talentTree}` })
     }
   }
 
@@ -77,6 +75,7 @@ export default function TalentIcon(props) {
     event.preventDefault()
     if (currentPoints > 0) {
       setCurrentPoints(currentPoints - 1)
+      dispatchTalentPoints({ type: `DECREASE_TALENT_${talentTree}` })
     }
   }
 

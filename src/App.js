@@ -1,6 +1,7 @@
 import React from "react"
 import TalentTree from "./components/TalentTree"
 import { makeStyles } from "@material-ui/styles"
+import { TalentPointsProvider } from "./contexts/TalentPointsProvider"
 
 var WebFont = require("webfontloader")
 
@@ -20,9 +21,9 @@ const useStyles = makeStyles({
 export default function App() {
   const classes = useStyles()
   return (
-    <div>
+    <TalentPointsProvider>
       <h1 className={classes.title}>Rogue Talent Tree</h1>
       <TalentTree />
-    </div>
+    </TalentPointsProvider>
   )
 }

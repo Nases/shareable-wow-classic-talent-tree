@@ -43,129 +43,52 @@ const useStyles = makeStyles(theme => ({
 export default function TalentTree() {
   const classes = useStyles()
 
-  const [state, setState] = useState({
-    talentPointsLeft: 51
-  })
-  // console.log(maxTalentPoints)
-
-  function changeTalentState(updatedState) {
-    setState(prevState => ({
-      ...prevState,
-      ...updatedState
-    }))
-  }
-
-  useEffect(() => {
-    console.log(state)
-  }, [state])
-
   return (
     <Grid container className={classes.root} spacing={2}>
       <Grid item xs={12}>
         <Grid container justify="center" spacing="2">
-          <div>{state.talentPointsLeft}</div>
           <Grid item>
             <div>Assasination</div>
             <Paper className={classes.assasination}>
               <Grid container>
-                <TalentIcon
-                  index="1"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
-                <TalentIcon
-                  index="2"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
-                <TalentIcon
-                  index="3"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
+                <TalentIcon index="1" />
+                <TalentIcon index="2" />
+                <TalentIcon index="3" />
                 <BlankIcon />
               </Grid>
               <Grid container>
-                <TalentIcon
-                  index="4"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
-                <TalentIcon
-                  index="5"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
+                <TalentIcon index="4" />
+                <TalentIcon index="5" />
                 <BlankIcon />
-                <TalentIcon
-                  index="6"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
+                <TalentIcon index="6" />
               </Grid>
               <Grid container>
-                <TalentIcon
-                  index="7"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
-                <TalentIcon
-                  index="8"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
-                <TalentIcon
-                  index="9"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
+                <TalentIcon index="7" />
+                <TalentIcon index="8" />
+                <TalentIcon index="9" />
                 <BlankIcon />
               </Grid>
               <Grid container>
                 <BlankIcon />
-                <TalentIcon
-                  index="10"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
-                <TalentIcon
-                  index="11"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
+                <TalentIcon index="10" />
+                <TalentIcon index="11" />
                 <BlankIcon />
               </Grid>
               <Grid container>
                 <BlankIcon />
-                <TalentIcon
-                  index="12"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
-                <TalentIcon
-                  index="13"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
+                <TalentIcon index="12" />
+                <TalentIcon index="13" />
                 <BlankIcon />
               </Grid>
               <Grid container>
                 <BlankIcon />
-                <TalentIcon
-                  index="14"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
+                <TalentIcon index="14" />
                 <BlankIcon />
                 <BlankIcon />
               </Grid>
               <Grid container>
                 <BlankIcon />
-                <TalentIcon
-                  index="15"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
+                <TalentIcon index="15" />
                 <BlankIcon />
                 <BlankIcon />
               </Grid>
@@ -175,120 +98,44 @@ export default function TalentTree() {
             <div>Combat</div>
             <Paper className={classes.combat}>
               <Grid container>
-                <TalentIcon
-                  index="16"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
-                <TalentIcon
-                  index="17"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
-                <TalentIcon
-                  index="18"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
+                <TalentIcon index="16" />
+                <TalentIcon index="17" />
+                <TalentIcon index="18" />
                 <BlankIcon />
               </Grid>
               <Grid container>
-                <TalentIcon
-                  index="19"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
-                <TalentIcon
-                  index="20"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
-                <TalentIcon
-                  index="21"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
+                <TalentIcon index="19" />
+                <TalentIcon index="20" />
+                <TalentIcon index="21" />
                 <BlankIcon />
               </Grid>
               <Grid container>
-                <TalentIcon
-                  index="22"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
-                <TalentIcon
-                  index="23"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
+                <TalentIcon index="22" />
+                <TalentIcon index="23" />
                 <BlankIcon />
-                <TalentIcon
-                  index="24"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
+                <TalentIcon index="24" />
               </Grid>
               <Grid container>
-                <TalentIcon
-                  index="25"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
-                <TalentIcon
-                  index="26"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
-                <TalentIcon
-                  index="27"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
+                <TalentIcon index="25" />
+                <TalentIcon index="26" />
+                <TalentIcon index="27" />
                 <BlankIcon />
               </Grid>
               <Grid container>
-                <TalentIcon
-                  index="28"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
-                <TalentIcon
-                  index="29"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
-                <TalentIcon
-                  index="30"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
-                <TalentIcon
-                  index="31"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
+                <TalentIcon index="28" />
+                <TalentIcon index="29" />
+                <TalentIcon index="30" />
+                <TalentIcon index="31" />
               </Grid>
               <Grid container>
                 <BlankIcon />
-                <TalentIcon
-                  index="32"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
-                <TalentIcon
-                  index="33"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
+                <TalentIcon index="32" />
+                <TalentIcon index="33" />
                 <BlankIcon />
               </Grid>
               <Grid container>
                 <BlankIcon />
-                <TalentIcon
-                  index="34"
-                  changeTalentState={changeTalentState}
-                  state={state}
-                />
+                <TalentIcon index="34" />
                 <BlankIcon />
                 <BlankIcon />
               </Grid>
@@ -299,43 +146,43 @@ export default function TalentTree() {
             <Paper className={classes.subtlety}>
               <Grid container>
                 <BlankIcon />
-                <TalentIcon index="35" changeTalentState={changeTalentState} />
-                <TalentIcon index="36" changeTalentState={changeTalentState} />
+                <TalentIcon index="35" />
+                <TalentIcon index="36" />
                 <BlankIcon />
               </Grid>
               <Grid container>
-                <TalentIcon index="37" changeTalentState={changeTalentState} />
-                <TalentIcon index="38" changeTalentState={changeTalentState} />
-                <TalentIcon index="39" changeTalentState={changeTalentState} />
+                <TalentIcon index="37" />
+                <TalentIcon index="38" />
+                <TalentIcon index="39" />
                 <BlankIcon />
               </Grid>
               <Grid container>
-                <TalentIcon index="40" changeTalentState={changeTalentState} />
-                <TalentIcon index="41" changeTalentState={changeTalentState} />
-                <TalentIcon index="42" changeTalentState={changeTalentState} />
+                <TalentIcon index="40" />
+                <TalentIcon index="41" />
+                <TalentIcon index="42" />
                 <BlankIcon />
               </Grid>
               <Grid container>
-                <TalentIcon index="43" changeTalentState={changeTalentState} />
-                <TalentIcon index="44" changeTalentState={changeTalentState} />
-                <TalentIcon index="45" changeTalentState={changeTalentState} />
+                <TalentIcon index="43" />
+                <TalentIcon index="44" />
+                <TalentIcon index="45" />
                 <BlankIcon />
               </Grid>
               <Grid container>
-                <TalentIcon index="46" changeTalentState={changeTalentState} />
-                <TalentIcon index="47" changeTalentState={changeTalentState} />
-                <TalentIcon index="48" changeTalentState={changeTalentState} />
-                <TalentIcon index="49" changeTalentState={changeTalentState} />
+                <TalentIcon index="46" />
+                <TalentIcon index="47" />
+                <TalentIcon index="48" />
+                <TalentIcon index="49" />
               </Grid>
               <Grid container>
                 <BlankIcon />
                 <BlankIcon />
-                <TalentIcon index="50" changeTalentState={changeTalentState} />
+                <TalentIcon index="50" />
                 <BlankIcon />
               </Grid>
               <Grid container>
                 <BlankIcon />
-                <TalentIcon index="51" changeTalentState={changeTalentState} />
+                <TalentIcon index="51" />
                 <BlankIcon />
                 <BlankIcon />
               </Grid>

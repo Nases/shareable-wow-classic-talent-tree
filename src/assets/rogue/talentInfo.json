@@ -6,7 +6,8 @@
     "title2": "Requires Rogue (Assassination)",
     "rank1": "Increases the damage done by your Eviscerate ability by 5%.",
     "rank2": "Increases the damage done by your Eviscerate ability by 10%.",
-    "rank3": "Increases the damage done by your Eviscerate ability by 15%."
+    "rank3": "Increases the damage done by your Eviscerate ability by 15%.",
+    "requiredPoints": 0
   },
   "_2": {
     "icon": "2.jpg",
@@ -14,7 +15,8 @@
     "title1": "Remorseless Attacks",
     "title2": "Requires Rogue (Assassination)",
     "rank1": "After killing an opponent that yields experience or honor, gives you a 20% increased critical strike chance on your next Sinister Strike, Backstab, Ambush, or Ghostly Strike.  Lasts 20 sec.",
-    "rank2": "After killing an opponent that yields experience or honor, gives you a 40% increased critical strike chance on your next Sinister Strike, Backstab, Ambush, or Ghostly Strike.  Lasts 20 sec."
+    "rank2": "After killing an opponent that yields experience or honor, gives you a 40% increased critical strike chance on your next Sinister Strike, Backstab, Ambush, or Ghostly Strike.  Lasts 20 sec.",
+    "requiredPoints": 0
   },
   "_3": {
     "icon": "3.jpg",
@@ -25,7 +27,8 @@
     "rank2": "Increases your critical strike chance by 2%.",
     "rank3": "Increases your critical strike chance by 3%.",
     "rank4": "Increases your critical strike chance by 4%.",
-    "rank5": "Increases your critical strike chance by 5%."
+    "rank5": "Increases your critical strike chance by 5%.",
+    "requiredPoints": 0
   },
   "_4": {
     "icon": "4.jpg",
@@ -34,7 +37,8 @@
     "title2": "Requires Rogue (Assassination)",
     "rank1": "Gives your finishing moves a 20% chance to add a combo point to your target.",
     "rank2": "Gives your finishing moves a 40% chance to add a combo point to your target.",
-    "rank3": "Gives your finishing moves a 60% chance to add a combo point to your target."
+    "rank3": "Gives your finishing moves a 60% chance to add a combo point to your target.",
+    "requiredPoints": 5
   },
   "_5": {
     "icon": "5.jpg",
@@ -42,7 +46,8 @@
     "title1": "Murder",
     "title2": "Requires Rogue (Assassination)",
     "rank1": "Increases all damage caused against Humanoid, Giant, Beast and Dragonkin targets by 1%.",
-    "rank2": "Increases all damage caused against Humanoid, Giant, Beast and Dragonkin targets by 2%."
+    "rank2": "Increases all damage caused against Humanoid, Giant, Beast and Dragonkin targets by 2%.",
+    "requiredPoints": 5
   },
   "_6": {
     "icon": "6.jpg",
@@ -51,14 +56,16 @@
     "title2": "Requires Rogue (Assassination)",
     "rank1": "Increases the duration of your Slice and Dice ability by 15%.",
     "rank2": "Increases the duration of your Slice and Dice ability by 30%.",
-    "rank3": "Increases the duration of your Slice and Dice ability by 45%."
+    "rank3": "Increases the duration of your Slice and Dice ability by 45%.",
+    "requiredPoints": 5
   },
   "_7": {
     "icon": "7.jpg",
     "maxPoints": 1,
     "title1": "Relentless Strikes",
     "title2": "Requires Rogue (Assassination)",
-    "rank1": "Your finishing moves have a 20% chance per combo point to restore 25 energy."
+    "rank1": "Your finishing moves have a 20% chance per combo point to restore 25 energy.",
+    "requiredPoints": 10
   },
   "_8": {
     "icon": "8.jpg",
@@ -66,7 +73,8 @@
     "title1": "Improved Expose Armor",
     "title2": "Requires Rogue (Assassination)",
     "rank1": "Increases the armor reduced by your Expose Armor ability by 25%.",
-    "rank2": "Increases the armor reduced by your Expose Armor ability by 50%."
+    "rank2": "Increases the armor reduced by your Expose Armor ability by 50%.",
+    "requiredPoints": 10
   },
   "_9": {
     "icon": "9.jpg",
@@ -77,7 +85,8 @@
     "rank2": "Increases the critical strike damage bonus of your Sinister Strike, Gouge, Backstab, Ghostly Strike, and Hemorrhage abilities by 12%.",
     "rank3": "Increases the critical strike damage bonus of your Sinister Strike, Gouge, Backstab, Ghostly Strike, and Hemorrhage abilities by 18%.",
     "rank4": "Increases the critical strike damage bonus of your Sinister Strike, Gouge, Backstab, Ghostly Strike, and Hemorrhage abilities by 24%.",
-    "rank5": "Increases the critical strike damage bonus of your Sinister Strike, Gouge, Backstab, Ghostly Strike, and Hemorrhage abilities by 30%."
+    "rank5": "Increases the critical strike damage bonus of your Sinister Strike, Gouge, Backstab, Ghostly Strike, and Hemorrhage abilities by 30%.",
+    "requiredPoints": 10
   },
   "_10": {
     "icon": "10.jpg",
@@ -88,7 +97,8 @@
     "rank2": "Increases the damage dealt by your poisons by 8% and gives your poisons an additional 16% chance to resist dispel effects.",
     "rank3": "Increases the damage dealt by your poisons by 12% and gives your poisons an additional 24% chance to resist dispel effects.",
     "rank4": "Increases the damage dealt by your poisons by 16% and gives your poisons an additional 32% chance to resist dispel effects.",
-    "rank5": "Increases the damage dealt by your poisons by 20% and gives your poisons an additional 40% chance to resist dispel effects."
+    "rank5": "Increases the damage dealt by your poisons by 20% and gives your poisons an additional 40% chance to resist dispel effects.",
+    "requiredPoints": 15
   },
   "_11": {
     "icon": "11.jpg",
@@ -99,7 +109,8 @@
     "rank2": "Increases the chance to apply poisons to your target by 4%.",
     "rank3": "Increases the chance to apply poisons to your target by 6%.",
     "rank4": "Increases the chance to apply poisons to your target by 8%.",
-    "rank5": "Increases the chance to apply poisons to your target by 10%."
+    "rank5": "Increases the chance to apply poisons to your target by 10%.",
+    "requiredPoints": 15
   },
   "_12": {
     "icon": "12.jpg",
@@ -107,7 +118,8 @@
     "title1": "Cold Blood",
     "title2": "Requires Rogue (Assassination)",
     "rank1": "When activated, increases the critical strike chance of your next Sinister Strike, Backstab, Ambush, or Eviscerate by 100%.",
-    "castTime": "Instant"
+    "castTime": "Instant",
+    "requiredPoints": 20
   },
   "_13": {
     "icon": "13.jpg",
@@ -116,7 +128,8 @@
     "title2": "Requires Rogue (Assassination)",
     "rank1": "While affected by your Kidney Shot ability, the target receives an additional 3% damage from all sources.",
     "rank2": "While affected by your Kidney Shot ability, the target receives an additional 6% damage from all sources.",
-    "rank3": "While affected by your Kidney Shot ability, the target receives an additional 9% damage from all sources."
+    "rank3": "While affected by your Kidney Shot ability, the target receives an additional 9% damage from all sources.",
+    "requiredPoints": 20
   },
   "_14": {
     "icon": "14.jpg",
@@ -127,14 +140,16 @@
     "rank2": "Your critical strikes from abilities that add combo points  have a 40% chance to add an additional combo point.",
     "rank3": "Your critical strikes from abilities that add combo points  have a 60% chance to add an additional combo point.",
     "rank4": "Your critical strikes from abilities that add combo points  have a 80% chance to add an additional combo point.",
-    "rank5": "Your critical strikes from abilities that add combo points  have a 100% chance to add an additional combo point."
+    "rank5": "Your critical strikes from abilities that add combo points  have a 100% chance to add an additional combo point.",
+    "requiredPoints": 25
   },
   "_15": {
     "icon": "15.jpg",
     "maxPoints": 1,
     "title1": "Vigor",
     "title2": "Requires Rogue (Assassination)",
-    "rank1": "Increases your maximum Energy by 10."
+    "rank1": "Increases your maximum Energy by 10.",
+    "requiredPoints": 30
   },
   "_16": {
     "icon": "16.jpg",
@@ -143,7 +158,8 @@
     "title2": "Requires Rogue (Combat)",
     "rank1": "Increases the effect duration of your Gouge ability by 0.5 sec.",
     "rank2": "Increases the effect duration of your Gouge ability by 1 sec.",
-    "rank3": "Increases the effect duration of your Gouge ability by 1.5 sec."
+    "rank3": "Increases the effect duration of your Gouge ability by 1.5 sec.",
+    "requiredPoints": 0
   },
   "_17": {
     "icon": "17.jpg",
@@ -151,7 +167,8 @@
     "title1": "Improved Sinister Strike",
     "title2": "Requires Rogue (Combat)",
     "rank1": "Reduces the Energy cost of your Sinister Strike ability by 3.",
-    "rank2": "Reduces the Energy cost of your Sinister Strike ability by 5."
+    "rank2": "Reduces the Energy cost of your Sinister Strike ability by 5.",
+    "requiredPoints": 0
   },
   "_18": {
     "icon": "18.jpg",
@@ -162,7 +179,8 @@
     "rank2": "Increases your Dodge chance by 2%.",
     "rank3": "Increases your Dodge chance by 3%.",
     "rank4": "Increases your Dodge chance by 4%.",
-    "rank5": "Increases your Dodge chance by 5%."
+    "rank5": "Increases your Dodge chance by 5%.",
+    "requiredPoints": 0
   },
   "_19": {
     "icon": "19.jpg",
@@ -171,7 +189,8 @@
     "title2": "Requires Rogue (Combat)",
     "rank1": "Increases the critical strike chance of your Backstab ability by 10%.",
     "rank2": "Increases the critical strike chance of your Backstab ability by 20%.",
-    "rank3": "Increases the critical strike chance of your Backstab ability by 30%."
+    "rank3": "Increases the critical strike chance of your Backstab ability by 30%.",
+    "requiredPoints": 5
   },
   "_20": {
     "icon": "20.jpg",
@@ -182,7 +201,8 @@
     "rank2": "Increases your Parry chance by 2%.",
     "rank3": "Increases your Parry chance by 3%.",
     "rank4": "Increases your Parry chance by 4%.",
-    "rank5": "Increases your Parry chance by 5%."
+    "rank5": "Increases your Parry chance by 5%.",
+    "requiredPoints": 5
   },
   "_21": {
     "icon": "21.jpg",
@@ -193,7 +213,8 @@
     "rank2": "Increases your chance to hit with melee weapons by 2%.",
     "rank3": "Increases your chance to hit with melee weapons by 3%.",
     "rank4": "Increases your chance to hit with melee weapons by 4%.",
-    "rank5": "Increases your chance to hit with melee weapons by 5%."
+    "rank5": "Increases your chance to hit with melee weapons by 5%.",
+    "requiredPoints": 5
   },
   "_22": {
     "icon": "22.jpg",
@@ -201,7 +222,8 @@
     "title1": "Endurance",
     "title2": "Requires Rogue (Combat)",
     "rank1": "Reduces the cooldown of your Sprint and Evasion abilities by 45 sec.",
-    "rank2": "Reduces the cooldown of your Sprint and Evasion abilities by 1.5 min."
+    "rank2": "Reduces the cooldown of your Sprint and Evasion abilities by 1.5 min.",
+    "requiredPoints": 10
   },
   "_23": {
     "icon": "23.jpg",
@@ -211,7 +233,8 @@
     "rank1": "A strike that becomes active after parrying an opponent's attack.  This attack deals 150% weapon damage and disarms the target for 6 sec.",
     "castTime": "Instant",
     "energyCost": "10 Energy",
-    "range": "Melee Range"
+    "range": "Melee Range",
+    "requiredPoints": 10
   },
   "_24": {
     "icon": "24.jpg",
@@ -219,7 +242,8 @@
     "title1": "Improved Sprint",
     "title2": "Requires Rogue (Combat)",
     "rank1": "Gives a 50% chance to remove all movement impairing effects when you activate your Sprint ability.",
-    "rank2": "Gives a 100% chance to remove all movement impairing effects when you activate your Sprint ability."
+    "rank2": "Gives a 100% chance to remove all movement impairing effects when you activate your Sprint ability.",
+    "requiredPoints": 10
   },
   "_25": {
     "icon": "25.jpg",
@@ -227,7 +251,8 @@
     "title1": "Improved Kick",
     "title2": "Requires Rogue (Combat)",
     "rank1": "Gives your Kick ability a 50% chance to silence the target for 2 sec.",
-    "rank2": "Gives your Kick ability a 100% chance to silence the target for 2 sec."
+    "rank2": "Gives your Kick ability a 100% chance to silence the target for 2 sec.",
+    "requiredPoints": 15
   },
   "_26": {
     "icon": "26.jpg",
@@ -238,7 +263,8 @@
     "rank2": "Increases your chance to get a critical strike with Daggers by 2%.",
     "rank3": "Increases your chance to get a critical strike with Daggers by 3%.",
     "rank4": "Increases your chance to get a critical strike with Daggers by 4%.",
-    "rank5": "Increases your chance to get a critical strike with Daggers by 5%."
+    "rank5": "Increases your chance to get a critical strike with Daggers by 5%.",
+    "requiredPoints": 15
   },
   "_27": {
     "icon": "27.jpg",
@@ -249,7 +275,8 @@
     "rank2": "Increases the damage done by your offhand weapon by 20%.",
     "rank3": "Increases the damage done by your offhand weapon by 30%.",
     "rank4": "Increases the damage done by your offhand weapon by 40%.",
-    "rank5": "Increases the damage done by your offhand weapon by 50%."
+    "rank5": "Increases the damage done by your offhand weapon by 50%.",
+    "requiredPoints": 15
   },
   "_28": {
     "icon": "28.jpg",
@@ -260,7 +287,8 @@
     "rank2": "Increases your skill with Maces by 2, and gives you a 2% chance to stun your target for 3 sec with a mace.",
     "rank3": "Increases your skill with Maces by 3, and gives you a 3% chance to stun your target for 3 sec with a mace.",
     "rank4": "Increases your skill with Maces by 4, and gives you a 4% chance to stun your target for 3 sec with a mace.",
-    "rank5": "Increases your skill with Maces by 5, and gives you a 6% chance to stun your target for 3 sec with a mace."
+    "rank5": "Increases your skill with Maces by 5, and gives you a 6% chance to stun your target for 3 sec with a mace.",
+    "requiredPoints": 20
   },
   "_29": {
     "icon": "29.jpg",
@@ -270,7 +298,8 @@
     "rank1": "Increases your attack speed by 20%.  In addition, attacks strike an additional nearby opponent.  Lasts 15 sec.",
     "castTime": "Instant",
     "energyCost": "Blade Flurry",
-    "cooldown": "2 min cooldown"
+    "cooldown": "2 min cooldown",
+    "requiredPoints": 20
   },
   "_30": {
     "icon": "30.jpg",
@@ -281,7 +310,8 @@
     "rank2": "Gives you a 2% chance to get an extra attack on the same target after dealing damage with your Sword.",
     "rank3": "Gives you a 3% chance to get an extra attack on the same target after dealing damage with your Sword.",
     "rank4": "Gives you a 4% chance to get an extra attack on the same target after dealing damage with your Sword.",
-    "rank5": "Gives you a 5% chance to get an extra attack on the same target after dealing damage with your Sword."
+    "rank5": "Gives you a 5% chance to get an extra attack on the same target after dealing damage with your Sword.",
+    "requiredPoints": 20
   },
   "_31": {
     "icon": "31.jpg",
@@ -292,7 +322,8 @@
     "rank2": "Increases your chance to get a critical strike with Fist Weapons by 2%.",
     "rank3": "Increases your chance to get a critical strike with Fist Weapons by 3%.",
     "rank4": "Increases your chance to get a critical strike with Fist Weapons by 4%.",
-    "rank5": "Increases your chance to get a critical strike with Fist Weapons by 5%."
+    "rank5": "Increases your chance to get a critical strike with Fist Weapons by 5%.",
+    "requiredPoints": 20
   },
   "_32": {
     "icon": "32.jpg",
@@ -300,7 +331,8 @@
     "title1": "Weapon Expertise",
     "title2": "Requires Rogue (Combat)",
     "rank1": "Increases your skill with Sword, Fist and Dagger weapons by 3.",
-    "rank2": "Increases your skill with Sword, Fist and Dagger weapons by 5."
+    "rank2": "Increases your skill with Sword, Fist and Dagger weapons by 5.",
+    "requiredPoints": 25
   },
   "_33": {
     "icon": "33.jpg",
@@ -309,7 +341,8 @@
     "title2": "Requires Rogue (Combat)",
     "rank1": "Increases the damage of your Sinister Strike and Eviscerate abilities by 2%.",
     "rank2": "Increases the damage of your Sinister Strike and Eviscerate abilities by 4%.",
-    "rank3": "Increases the damage of your Sinister Strike and Eviscerate abilities by 6%."
+    "rank3": "Increases the damage of your Sinister Strike and Eviscerate abilities by 6%.",
+    "requiredPoints": 25
   },
   "_34": {
     "icon": "34.jpg",
@@ -318,7 +351,8 @@
     "title2": "Requires Rogue (Combat)",
     "rank1": "Increases your Energy regeneration rate by 100% for 15 sec.",
     "castTime": "Instant",
-    "cooldown": "5 min cooldown"
+    "cooldown": "5 min cooldown",
+    "requiredPoints": 30
   },
   "_35": {
     "icon": "35.jpg",
@@ -329,7 +363,8 @@
     "rank2": "Reduces the chance enemies have to detect you while in Stealth mode.  More effective than Master of Deception (Rank 1).",
     "rank3": "Reduces the chance enemies have to detect you while in Stealth mode.  More effective than Master of Deception (Rank 2).",
     "rank4": "Reduces the chance enemies have to detect you while in Stealth mode.  More effective than Master of Deception (Rank 3).",
-    "rank5": "Reduces the chance enemies have to detect you while in Stealth mode.  More effective than Master of Deception (Rank 4)."
+    "rank5": "Reduces the chance enemies have to detect you while in Stealth mode.  More effective than Master of Deception (Rank 4).",
+    "requiredPoints": 0
   },
   "_36": {
     "icon": "36.jpg",
@@ -340,7 +375,8 @@
     "rank2": "Increases the damage dealt when striking from behind with your Backstab, Garrote, or Ambush abilities by 8%.",
     "rank3": "Increases the damage dealt when striking from behind with your Backstab, Garrote, or Ambush abilities by 12%.",
     "rank4": "Increases the damage dealt when striking from behind with your Backstab, Garrote, or Ambush abilities by 16%.",
-    "rank5": "Increases the damage dealt when striking from behind with your Backstab, Garrote, or Ambush abilities by 20%."
+    "rank5": "Increases the damage dealt when striking from behind with your Backstab, Garrote, or Ambush abilities by 20%.",
+    "requiredPoints": 0
   },
   "_37": {
     "icon": "37.jpg",
@@ -348,7 +384,8 @@
     "title1": "Sleight of Hand",
     "title2": "Requires Rogue (Subtlety)",
     "rank1": "Reduces the chance you are critically hit by melee and ranged attacks by 1% and increases the threat reduction of your Feint ability by 10%.",
-    "rank2": "Reduces the chance you are critically hit by melee and ranged attacks by 2% and increases the threat reduction of your Feint ability by 20%."
+    "rank2": "Reduces the chance you are critically hit by melee and ranged attacks by 2% and increases the threat reduction of your Feint ability by 20%.",
+    "requiredPoints": 5
   },
   "_38": {
     "icon": "38.jpg",
@@ -356,7 +393,8 @@
     "title1": "Elusiveness",
     "title2": "Requires Rogue (Subtlety)",
     "rank1": "Reduces the cooldown of your Vanish and Blind abilities by 45 sec.",
-    "rank2": "Reduces the cooldown of your Vanish and Blind abilities by 1.5 min."
+    "rank2": "Reduces the cooldown of your Vanish and Blind abilities by 1.5 min.",
+    "requiredPoints": 5
   },
   "_39": {
     "icon": "39.jpg",
@@ -367,7 +405,8 @@
     "rank2": "Increases your speed while stealthed by 6% and reduces the cooldown of your Stealth ability by 2 sec.",
     "rank3": "Increases your speed while stealthed by 9% and reduces the cooldown of your Stealth ability by 3 sec.",
     "rank4": "Increases your speed while stealthed by 12% and reduces the cooldown of your Stealth ability by 4 sec.",
-    "rank5": "Increases your speed while stealthed by 15% and reduces the cooldown of your Stealth ability by 5 sec."
+    "rank5": "Increases your speed while stealthed by 15% and reduces the cooldown of your Stealth ability by 5 sec.",
+    "requiredPoints": 5
   },
   "_40": {
     "icon": "40.jpg",
@@ -376,7 +415,8 @@
     "title2": "Requires Rogue (Subtlety)",
     "rank1": "Gives you a 25% chance to add an additional combo point to your target when using your Ambush, Garrote, or Cheap Shot ability.",
     "rank2": "Gives you a 50% chance to add an additional combo point to your target when using your Ambush, Garrote, or Cheap Shot ability.",
-    "rank3": "Gives you a 75% chance to add an additional combo point to your target when using your Ambush, Garrote, or Cheap Shot ability."
+    "rank3": "Gives you a 75% chance to add an additional combo point to your target when using your Ambush, Garrote, or Cheap Shot ability.",
+    "requiredPoints": 10
   },
   "_41": {
     "icon": "41.jpg",
@@ -388,7 +428,8 @@
     "cooldown": "20 sec cooldown",
     "range": "Melee Range",
     "requires1": "Requires Melee Weapon",
-    "energyCost": "40 Energy"
+    "energyCost": "40 Energy",
+    "requiredPoints": 10
   },
   "_42": {
     "icon": "42.jpg",
@@ -397,7 +438,8 @@
     "title2": "Requires Rogue (Subtlety)",
     "rank1": "Increases the critical strike chance of your Ambush ability by 15%.",
     "rank2": "Increases the critical strike chance of your Ambush ability by 30%.",
-    "rank3": "Increases the critical strike chance of your Ambush ability by 45%."
+    "rank3": "Increases the critical strike chance of your Ambush ability by 45%.",
+    "requiredPoints": 10
   },
   "_43": {
     "icon": "43.jpg",
@@ -406,7 +448,8 @@
     "title2": "Requires Rogue (Subtlety)",
     "rank1": "Gives you a 15% chance to add a combo point to your target after dodging their attack or fully resisting one of their spells.",
     "rank2": "Gives you a 30% chance to add a combo point to your target after dodging their attack or fully resisting one of their spells.",
-    "rank3": "Gives you a 45% chance to add a combo point to your target after dodging their attack or fully resisting one of their spells."
+    "rank3": "Gives you a 45% chance to add a combo point to your target after dodging their attack or fully resisting one of their spells.",
+    "requiredPoints": 15
   },
   "_44": {
     "icon": "44.jpg",
@@ -415,7 +458,8 @@
     "title2": "Requires Rogue (Subtlety)",
     "rank1": "Gives you a 30% chance to return to stealth mode after using your Sap ability.",
     "rank2": "Gives you a 60% chance to return to stealth mode after using your Sap ability.",
-    "rank3": "Gives you a 90% chance to return to stealth mode after using your Sap ability."
+    "rank3": "Gives you a 90% chance to return to stealth mode after using your Sap ability.",
+    "requiredPoints": 15
   },
   "_45": {
     "icon": "45.jpg",
@@ -424,7 +468,8 @@
     "title2": "Requires Rogue (Subtlety)",
     "rank1": "Causes your attacks to ignore 0 of your target's Armor and increases the damage dealt by your Rupture ability by 10%.  The amount of Armor reduced increases with your level.",
     "rank2": "Causes your attacks to ignore 0 of your target's Armor and increases the damage dealt by your Rupture ability by 20%.  The amount of Armor reduced increases with your level.",
-    "rank3": "Causes your attacks to ignore 0 of your target's Armor and increases the damage dealt by your Rupture ability by 30%.  The amount of Armor reduced increases with your level."
+    "rank3": "Causes your attacks to ignore 0 of your target's Armor and increases the damage dealt by your Rupture ability by 30%.  The amount of Armor reduced increases with your level.",
+    "requiredPoints": 15
   },
   "_46": {
     "icon": "46.jpg",
@@ -432,14 +477,16 @@
     "title1": "Heightened Senses",
     "title2": "Requires Rogue (Subtlety)",
     "rank1": "Increases your Stealth detection and reduces the chance you are hit by spells and ranged attacks by 2%.",
-    "rank2": "Increases your Stealth detection and reduces the chance you are hit by spells and ranged attacks by 4%.  More effective than Heightened Senses (Rank 1)."
+    "rank2": "Increases your Stealth detection and reduces the chance you are hit by spells and ranged attacks by 4%.  More effective than Heightened Senses (Rank 1).",
+    "requiredPoints": 20
   },
   "_47": {
     "icon": "47.jpg",
     "maxPoints": 1,
     "title1": "Preparation",
     "title2": "Requires Rogue (Subtlety)",
-    "rank1": "When activated, this ability immediately finishes the cooldown on your other Rogue abilities."
+    "rank1": "When activated, this ability immediately finishes the cooldown on your other Rogue abilities.",
+    "requiredPoints": 20
   },
   "_48": {
     "icon": "48.jpg",
@@ -447,7 +494,8 @@
     "title1": "Dirty Deeds",
     "title2": "Requires Rogue (Subtlety)",
     "rank1": "Reduces the Energy cost of your Cheap Shot and Garrote abilities by 10.",
-    "rank2": "Reduces the Energy cost of your Cheap Shot and Garrote abilities by 20."
+    "rank2": "Reduces the Energy cost of your Cheap Shot and Garrote abilities by 20.",
+    "requiredPoints": 20
   },
   "_49": {
     "icon": "49.jpg",
@@ -459,7 +507,8 @@
     "castTime": "Instant",
     "requires1": "Requires Melee Weapon",
     "energyCost": "35 Energy",
-    "range": "Melee Range"
+    "range": "Melee Range",
+    "requiredPoints": 20
   },
   "_50": {
     "icon": "50.jpg",
@@ -470,7 +519,8 @@
     "rank2": "Increases your Attack Power by 4%.",
     "rank3": "Increases your Attack Power by 6%.",
     "rank4": "Increases your Attack Power by 8%.",
-    "rank5": "Increases your Attack Power by 10%."
+    "rank5": "Increases your Attack Power by 10%.",
+    "requiredPoints": 25
   },
   "_51": {
     "icon": "51.jpg",
@@ -479,6 +529,7 @@
     "title2": "Requires Rogue (Subtlety)",
     "rank1": "When used, adds 2 combo points to your target.  You must add to or use those combo points within 10 sec or the combo points are lost.",
     "castTime": "Instant",
-    "cooldown": "2 min cooldown"
+    "cooldown": "2 min cooldown",
+    "requiredPoints": 30
   }
 }

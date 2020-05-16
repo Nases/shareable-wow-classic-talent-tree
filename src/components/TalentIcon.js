@@ -31,12 +31,13 @@ export default function TalentIcon(props) {
       width: "37px",
       height: "37px",
       border: '1px solid rgba(64,191,64)',
+      // border: '1px solid rgba(255,209,0)',
       borderRadius: '5px',
       marginTop: '3px',
       marginLeft: '3px',
       '&:hover': {
-        boxShadow: "inset 0px 0px 12px rgba(255,255,255,0.8)"
-      },
+        boxShadow: "inset 0px 0px 12px rgba(255,255,255,0.6)"
+      }
     },
     currentPoints: {
       display: "inline-block",
@@ -60,7 +61,6 @@ export default function TalentIcon(props) {
   useEffect(() => {
     var talentStateStructure = {}
     talentStateStructure[talentIndex] = currentPoints
-    props.changeTalentState(talentStateStructure)
   }, [currentPoints])
 
 
@@ -70,7 +70,6 @@ export default function TalentIcon(props) {
 
       var talentStateStructure = {}
       talentStateStructure["talentPointsLeft"] = props.talentPointsLeft - 1
-      props.changeTalentState(talentStateStructure)
     }
   }
 

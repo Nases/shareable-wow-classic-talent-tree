@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { makeStyles } from "@material-ui/styles";
-const talentInfo = require("../assets/rogue/talentInfo.json");
+import React, { useState, useEffect } from "react"
+import { makeStyles } from "@material-ui/styles"
+const talentInfo = require("../assets/rogue/talentInfo.json")
 
 const useStyles = makeStyles({
   root: {
@@ -17,36 +17,36 @@ const useStyles = makeStyles({
   rank: {
     color: "#ffd100"
   }
-});
+})
 
 export default function TalentTooltip(props) {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  var index = "_" + props.index;
-  var talent = talentInfo[index];
-  var title1 = talent.title1;
-  var title2 = talent.title2;
-  var maxPoints = talent.maxPoints;
-  var currentPoints = props.currentPoints;
-  var currentRank = talent["rank" + currentPoints];
-  var nextRank = talent["rank" + (currentPoints + 1)];
+  var index = "_" + props.index
+  var talent = talentInfo[index]
+  var title1 = talent.title1
+  var title2 = talent.title2
+  var maxPoints = talent.maxPoints
+  var currentPoints = props.currentPoints
+  var currentRank = talent["rank" + currentPoints]
+  var nextRank = talent["rank" + (currentPoints + 1)]
 
-  var renderRank;
-  var renderNextRank;
+  var renderRank
+  var renderNextRank
 
   if (currentPoints === 0) {
-    renderRank = nextRank;
-    renderNextRank = "";
+    renderRank = nextRank
+    renderNextRank = ""
   } else {
-    renderRank = currentRank;
-    renderNextRank = nextRank;
+    renderRank = currentRank
+    renderNextRank = nextRank
   }
 
-  var talentLearnable = true;
+  var talentLearnable = true
   if (currentPoints < maxPoints) {
-    talentLearnable = true;
+    talentLearnable = true
   } else {
-    talentLearnable = false;
+    talentLearnable = false
   }
 
   return (
@@ -60,5 +60,5 @@ export default function TalentTooltip(props) {
         {talentLearnable ? "Click to learn" : "Right-click to unlearn"}
       </div>
     </div>
-  );
+  )
 }

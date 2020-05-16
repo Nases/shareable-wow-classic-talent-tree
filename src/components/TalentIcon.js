@@ -20,11 +20,7 @@ export default function TalentIcon(props) {
       backgroundImage: `url(${iconBG})`,
       backgroundRepeat: "no-repeat",
       margin: "auto",
-      marginBottom: "15px",
-      // border: '1px solid rgba(64,191,64)',
-      // borderRadius: '5px',
-      // outline: '1px solid rgba(64,191,64)',
-      // outlineOffset: '-4px',
+      marginBottom: "15px"
     },
     _1: {
       // filter: "grayscale(95%)",
@@ -32,12 +28,15 @@ export default function TalentIcon(props) {
       backgroundSize: "33px",
       backgroundRepeat: "no-repeat",
       backgroundPosition: "center",
-      width: "36px",
-      height: "36px",
+      width: "37px",
+      height: "37px",
       border: '1px solid rgba(64,191,64)',
       borderRadius: '5px',
       marginTop: '3px',
       marginLeft: '3px',
+      '&:hover': {
+        boxShadow: "inset 0px 0px 12px rgba(255,255,255,0.8)"
+      },
     },
     currentPoints: {
       display: "inline-block",

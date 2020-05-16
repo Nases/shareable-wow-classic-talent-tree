@@ -5,7 +5,39 @@ import Tippy from "@tippy.js/react"
 import TalentTooltip from "./TalentTooltip"
 import { useTalentPoints, useDispatchTalentPoints } from "../contexts/TalentPointsProvider"
 
-export default function TalentIcon(props) {
+
+// deal with component rerender for every icon on total points change
+
+// const select = () => {
+//   var dispatchTalentPoints = useDispatchTalentPoints()
+//   return {
+//     dispatchTalentPoints: dispatchTalentPoints
+//   }
+// }
+
+// let B = React.memo(({ dispatch, string }) => {
+//   console.log("this is the only render of B")
+//   return (
+//     <div>
+//       <p>B: {string}</p>
+//       <button onClick={() => dispatch("increment")}>+1</button>
+//     </div>
+//   )
+// })
+
+// function connect(WrappedComponent, select) {
+//   return function (props) {
+//     const selectors = select()
+//     return <WrappedComponent {...selectors} {...props} />
+//   }
+// }
+
+// B = connect(
+//   B,
+//   select
+// )
+
+const TalentIcon = (props) => {
   var talentPoints = useTalentPoints()
   var dispatchTalentPoints = useDispatchTalentPoints()
   console.log(talentPoints)
@@ -18,6 +50,7 @@ export default function TalentIcon(props) {
   var talent = talentInfo[talentIndex]
   var maxTalentPoints = talent.maxPoints
   var talentTree = talent.talentTree
+
 
   const useStyles = makeStyles({
     iconBG: {
@@ -102,3 +135,5 @@ export default function TalentIcon(props) {
     </Tippy>
   )
 }
+
+export default TalentIcon

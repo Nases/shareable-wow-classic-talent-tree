@@ -6,51 +6,35 @@ import TalentTooltip from "./TalentTooltip"
 import { useTalentPoints, useDispatchTalentPoints } from "../contexts/TalentPointsProvider"
 
 
-// deal with component rerender for every icon on total points change
-
-// const select = () => {
-//   var dispatchTalentPoints = useDispatchTalentPoints()
-//   return {
-//     dispatchTalentPoints: dispatchTalentPoints
-//   }
-// }
-
-// let B = React.memo(({ dispatch, string }) => {
-//   console.log("this is the only render of B")
-//   return (
-//     <div>
-//       <p>B: {string}</p>
-//       <button onClick={() => dispatch("increment")}>+1</button>
-//     </div>
-//   )
-// })
-
-// function connect(WrappedComponent, select) {
-//   return function (props) {
-//     const selectors = select()
-//     return <WrappedComponent {...selectors} {...props} />
-//   }
-// }
-
-// B = connect(
-//   B,
-//   select
-// )
-
 const TalentIcon = (props) => {
   var talentPoints = useTalentPoints()
   var dispatchTalentPoints = useDispatchTalentPoints()
-  console.log(talentPoints)
+
+  const [currentPoints, setCurrentPoints] = useState(0)
 
   var index = props.index
   var talentIndex = "_" + index
   var talentInfo = require("../assets/rogue/talentInfo.json")
   var iconBG = require("../assets/rogue/talent-icons/iconBG.png")
   var talentIcon = require(`../assets/rogue/talent-icons/${index}.jpg`)
-  var talent = talentInfo[talentIndex]
-  var maxTalentPoints = talent.maxPoints
-  var talentTree = talent.talentTree
+  var { maxPoints, talentTree, requiredPoints } = talentInfo[talentIndex]
+  var talentPointsUsed = talentPoints[`talent${talentTree}PointsUsed`]
+  var talentAvailable = talentPointsUsed >= requiredPoints
+  var talentMaxedOut = currentPoints == maxPoints
 
+  function talentOnLeftClick() {
+    if (currentPoints < maxPoints && talentAvailable) {
+      setCurrentPoints(currentPoints + 1)
+      dispatchTalentPoints({ type: `INCREASE_TALENT_${talentTree}` })
+    }
+  }
+  function talentOnRightClick(event) {
+    event.preventDefault()
+    if (currentPoints > 0 && talentAvailable) {
+      setCurrentPoints(currentPoints - 1)
+      dispatchTalentPoints({ type: `DECREASE_TALENT_${talentTree}` })
+    }
+  }
 
   const useStyles = makeStyles({
     iconBG: {
@@ -61,16 +45,15 @@ const TalentIcon = (props) => {
       margin: "auto",
       marginBottom: "15px"
     },
-    _1: {
-      // filter: "grayscale(95%)",
+    icon: {
+      filter: (talentAvailable ? "grayscale(0%)" : "grayscale(95%)"),
       backgroundImage: `url(${talentIcon})`,
       backgroundSize: "33px",
       backgroundRepeat: "no-repeat",
       backgroundPosition: "center",
       width: "37px",
       height: "37px",
-      border: '1px solid rgba(64,191,64)',
-      // border: '1px solid rgba(255,209,0)',
+      border: (talentMaxedOut ? '1px solid rgba(255,209,0)' : '1px solid rgba(64,191,64)'),
       borderRadius: '5px',
       marginTop: '3px',
       marginLeft: '3px',
@@ -95,23 +78,6 @@ const TalentIcon = (props) => {
 
   const classes = useStyles()
 
-  const [currentPoints, setCurrentPoints] = useState(0)
-
-  function talentOnLeftClick() {
-    if (currentPoints < maxTalentPoints) {
-      setCurrentPoints(currentPoints + 1)
-      dispatchTalentPoints({ type: `INCREASE_TALENT_${talentTree}` })
-    }
-  }
-
-  function talentOnRightClick(event) {
-    event.preventDefault()
-    if (currentPoints > 0) {
-      setCurrentPoints(currentPoints - 1)
-      dispatchTalentPoints({ type: `DECREASE_TALENT_${talentTree}` })
-    }
-  }
-
   return (
     <Tippy
       content={<TalentTooltip index={index} currentPoints={currentPoints} />}
@@ -126,9 +92,9 @@ const TalentIcon = (props) => {
         onClick={talentOnLeftClick}
         onContextMenu={talentOnRightClick}
       >
-        <div className={classes._1}>
+        <div className={classes.icon}>
           <div className={classes.currentPoints}>
-            {currentPoints}/{maxTalentPoints}
+            {currentPoints}/{maxPoints}
           </div>
         </div>
       </Grid>

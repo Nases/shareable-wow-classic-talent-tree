@@ -12,9 +12,12 @@ WebFont.load({
 })
 
 const useStyles = makeStyles({
+  root: {
+    cursor: "url(/assets/cursor/wow_cursor.png), auto"
+  },
   title: {
     textAlign: "center",
-    fontFamily: "Alegreye Sans, sans-serif"
+    fontFamily: "Alegreye Sans, sans-serif",
   }
 })
 
@@ -22,8 +25,10 @@ export default function App() {
   const classes = useStyles()
   return (
     <TalentPointsProvider>
-      <h1 className={classes.title}>Rogue Talent Tree</h1>
-      <TalentTree />
+      <div className={classes.root}>
+        <h1 className={classes.title}>Rogue Talent Tree</h1>
+        <TalentTree />
+      </div>
     </TalentPointsProvider>
   )
 }

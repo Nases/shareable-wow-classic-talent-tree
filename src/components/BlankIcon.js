@@ -9,4 +9,4 @@ const BlankIcon = () => {
   )
 }
 
-export default BlankIcon;
+export default BlankIcon

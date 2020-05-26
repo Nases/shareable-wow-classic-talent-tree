@@ -17,22 +17,22 @@ const TalentIcon = (props) => {
   var talentInfo = require("../assets/rogue/talentInfo.json")
   var iconBG = require("../assets/rogue/talent-icons/iconBG.png")
   var talentIcon = require(`../assets/rogue/talent-icons/${index}.jpg`)
-  var { maxPoints, talentTree, requiredPoints } = talentInfo[talentIndex]
-  var talentPointsUsed = talentPoints[`talent${talentTree}PointsUsed`]
+  var { maxPoints, spec, requiredPoints } = talentInfo[talentIndex]
+  var talentPointsUsed = talentPoints[`talent${spec}PointsUsed`]
   var talentAvailable = talentPointsUsed >= requiredPoints
   var talentMaxedOut = currentPoints == maxPoints
 
   function talentOnLeftClick() {
     if (currentPoints < maxPoints && talentAvailable) {
       setCurrentPoints(currentPoints + 1)
-      dispatchTalentPoints({ type: `INCREASE_TALENT_${talentTree}` })
+      dispatchTalentPoints({ type: `INCREASE_TALENT_${spec}` })
     }
   }
   function talentOnRightClick(event) {
     event.preventDefault()
     if (currentPoints > 0 && talentAvailable) {
       setCurrentPoints(currentPoints - 1)
-      dispatchTalentPoints({ type: `DECREASE_TALENT_${talentTree}` })
+      dispatchTalentPoints({ type: `DECREASE_TALENT_${spec}` })
     }
   }
 

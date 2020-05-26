@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react"
 import { makeStyles } from "@material-ui/core/styles"
 import { Grid, Paper } from "@material-ui/core"
-
+import { useTalentPoints } from "../contexts/TalentPointsProvider"
 import TalentIcon from "./TalentIcon"
 import BlankIcon from './BlankIcon'
 
-const assasinationBG = require("../assets/rogue/background/assasination.jpg")
-const combatBG = require("../assets/rogue/background/combat.jpg")
-const subtletyBG = require("../assets/rogue/background/subtlety.jpg")
+const assasinationBG = require("../assets/rogue/background/1.jpg")
+const combatBG = require("../assets/rogue/background/2.jpg")
+const subtletyBG = require("../assets/rogue/background/3.jpg")
 
 const paperStyle = {
   height: 420,
@@ -42,11 +42,13 @@ const useStyles = makeStyles(theme => ({
 
 export default function TalentTree() {
   const classes = useStyles()
+  const talentPoints = useTalentPoints()
 
   return (
     <Grid container className={classes.root} spacing={2}>
       <Grid item xs={12}>
         <Grid container justify="center" spacing="2">
+          <div>{talentPoints.totalPointsLeft}</div>
           <Grid item>
             <div>Assasination</div>
             <Paper className={classes.assasination}>

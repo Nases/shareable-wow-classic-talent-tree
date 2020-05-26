@@ -13,7 +13,9 @@ WebFont.load({
 
 const useStyles = makeStyles({
   root: {
-    cursor: "url(/assets/cursor/wow_cursor.png), auto"
+    cursor: "url(/assets/cursor/wow_cursor.png), auto",
+    backgroundColor: "gray",
+    height: "100vh"
   },
   title: {
     textAlign: "center",

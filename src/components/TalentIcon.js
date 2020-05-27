@@ -22,23 +22,39 @@ const TalentIcon = (props) => {
   var talentAvailable = talentPointsUsed >= requiredPoints
   var talentMaxedOut = currentPoints == maxPoints
 
+  function cumRowPointsAfter(limit) {
+    var answer = 0
+    for (let i = row + 1; i < limit; i++) { // limit = 2, answer should 0 - limit = 3, answer should row+1 - limit = 4, answer should row+1 + row+2
+      answer += talentPoints[`spec${spec}Row${i}`]
+    }
+    return answer
+  }
+
+  function cumRowPointsBelow() {
+    var answer = 0
+    for (let i = row; i > 0; i--) { // if row 1, spec1row1 - if row 2, spec1row1 + spec1row2
+      answer += talentPoints[`spec${spec}Row${i}`]
+    }
+    return answer
+  }
+
   function checkRowPointsAfter() {
     var specRow = `spec${spec}Row${row}`
-    switch (specRow) {
-      case 'spec1Row1':
-        if (talentPoints.spec1Row1 > 5) {
-          return true
-        }
-        if (talentPoints.spec1Row2 > 0) {
+
+    for (let i = row + 1; i <= 7; i++) {
+      if (talentPoints[`spec${spec}Row${i}`] > 0) {
+        console.log('Below: ', cumRowPointsBelow(i))
+        console.log('5 * (i - 1)): ', 5 * (i - 1))
+        console.log('After: ', cumRowPointsAfter(i))
+        if (cumRowPointsBelow() <= (5 * (i - 1)) - cumRowPointsAfter(i)) {
+          console.log('false triggered')
           return false
         }
-      default:
-        return true
+      }
     }
+    return true
   }
-  // console.log(talentPoints.spec1Row2)
 
-  checkRowPointsAfter()
   function talentOnLeftClick() {
     if (currentPoints < maxPoints && talentAvailable) {
       setCurrentPoints(currentPoints + 1)

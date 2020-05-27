@@ -4,6 +4,7 @@ const talentInfo = require("../assets/rogue/talentInfo.json")
 
 const useStyles = makeStyles({
   root: {
+    display: 'absolute',
     marginLeft: '42px',
     color: "white",
     width: "auto",

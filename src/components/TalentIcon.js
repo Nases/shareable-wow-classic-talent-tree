@@ -10,7 +10,7 @@ const TalentIcon = (props) => {
   var talentPoints = useTalentPoints()
   var dispatchTalentPoints = useDispatchTalentPoints()
 
-  const [currentPoints, setCurrentPoints] = useState(0)
+  // const [currentPoints, setCurrentPoints] = useState(0)
 
   var index = props.index
   var talentIndex = "_" + index
@@ -21,10 +21,12 @@ const TalentIcon = (props) => {
   var talentPointsUsed = talentPoints[`talent${spec}PointsUsed`]
   var talentAvailable = talentPointsUsed >= requiredPoints
   var talentMaxedOut = currentPoints == maxPoints
+  var currentPoints = talentPoints[index]
+
 
   function cumRowPointsAfter(limit) {
     var answer = 0
-    for (let i = row + 1; i < limit; i++) { // limit = 2, answer should 0 - limit = 3, answer should row+1 - limit = 4, answer should row+1 + row+2
+    for (let i = row + 1; i < limit; i++) {
       answer += talentPoints[`spec${spec}Row${i}`]
     }
     return answer
@@ -32,22 +34,16 @@ const TalentIcon = (props) => {
 
   function cumRowPointsBelow() {
     var answer = 0
-    for (let i = row; i > 0; i--) { // if row 1, spec1row1 - if row 2, spec1row1 + spec1row2
+    for (let i = row; i > 0; i--) {
       answer += talentPoints[`spec${spec}Row${i}`]
     }
     return answer
   }
 
   function checkRowPointsAfter() {
-    var specRow = `spec${spec}Row${row}`
-
     for (let i = row + 1; i <= 7; i++) {
       if (talentPoints[`spec${spec}Row${i}`] > 0) {
-        console.log('Below: ', cumRowPointsBelow(i))
-        console.log('5 * (i - 1)): ', 5 * (i - 1))
-        console.log('After: ', cumRowPointsAfter(i))
         if (cumRowPointsBelow() <= (5 * (i - 1)) - cumRowPointsAfter(i)) {
-          console.log('false triggered')
           return false
         }
       }
@@ -57,17 +53,17 @@ const TalentIcon = (props) => {
 
   function talentOnLeftClick() {
     if (currentPoints < maxPoints && talentAvailable) {
-      setCurrentPoints(currentPoints + 1)
       dispatchTalentPoints({ type: `INCREASE_TALENT_${spec}` })
       dispatchTalentPoints({ type: `INCREASE_SPEC${spec}_ROW${row}` })
+      dispatchTalentPoints({ type: `INCREASE_${index}` })
     }
   }
   function talentOnRightClick(event) {
     event.preventDefault()
     if (currentPoints > 0 && talentAvailable && checkRowPointsAfter()) {
-      setCurrentPoints(currentPoints - 1)
       dispatchTalentPoints({ type: `DECREASE_TALENT_${spec}` })
       dispatchTalentPoints({ type: `DECREASE_SPEC${spec}_ROW${row}` })
+      dispatchTalentPoints({ type: `DECREASE_${index}` })
     }
   }
 

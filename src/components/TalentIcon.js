@@ -17,22 +17,41 @@ const TalentIcon = (props) => {
   var talentInfo = require("../assets/rogue/talentInfo.json")
   var iconBG = require("../assets/rogue/talent-icons/iconBG.png")
   var talentIcon = require(`../assets/rogue/talent-icons/${index}.jpg`)
-  var { maxPoints, spec, requiredPoints } = talentInfo[talentIndex]
+  var { maxPoints, spec, row, requiredPoints } = talentInfo[talentIndex]
   var talentPointsUsed = talentPoints[`talent${spec}PointsUsed`]
   var talentAvailable = talentPointsUsed >= requiredPoints
   var talentMaxedOut = currentPoints == maxPoints
 
+  function checkRowPointsAfter() {
+    var specRow = `spec${spec}Row${row}`
+    switch (specRow) {
+      case 'spec1Row1':
+        if (talentPoints.spec1Row1 > 5) {
+          return true
+        }
+        if (talentPoints.spec1Row2 > 0) {
+          return false
+        }
+      default:
+        return true
+    }
+  }
+  // console.log(talentPoints.spec1Row2)
+
+  checkRowPointsAfter()
   function talentOnLeftClick() {
     if (currentPoints < maxPoints && talentAvailable) {
       setCurrentPoints(currentPoints + 1)
       dispatchTalentPoints({ type: `INCREASE_TALENT_${spec}` })
+      dispatchTalentPoints({ type: `INCREASE_SPEC${spec}_ROW${row}` })
     }
   }
   function talentOnRightClick(event) {
     event.preventDefault()
-    if (currentPoints > 0 && talentAvailable) {
+    if (currentPoints > 0 && talentAvailable && checkRowPointsAfter()) {
       setCurrentPoints(currentPoints - 1)
       dispatchTalentPoints({ type: `DECREASE_TALENT_${spec}` })
+      dispatchTalentPoints({ type: `DECREASE_SPEC${spec}_ROW${row}` })
     }
   }
 

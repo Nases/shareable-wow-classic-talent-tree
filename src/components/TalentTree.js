@@ -44,6 +44,8 @@ export default function TalentTree() {
   const classes = useStyles()
   const talentPoints = useTalentPoints()
 
+  // console.log(talentPoints)
+
   return (
     <Grid container className={classes.root} spacing={2}>
       <Grid item xs={12}>
